@@ -1,4 +1,4 @@
-# Lab 2: Functional Programming in Java
+# Lab 1: Functional Programming in Java
 
 ### Learning Objectives
 
