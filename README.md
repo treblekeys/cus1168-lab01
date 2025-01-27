@@ -71,7 +71,7 @@ public class FunctionalProgramming {
 
 ```
 
-**Expected Output : **
+**Expected Output :**
 
 ```text
 Original numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -80,7 +80,7 @@ Doubled numbers: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 Sum of doubled numbers: 110
 ```
 
-**Hints: **
+**Hints:**
 
 - For Task 2: To double each number, use `.map(n -> n * 2)`
 - For Task 3: To sum numbers, convert the stream to `IntStream` using `.mapToInt()`
@@ -124,7 +124,7 @@ public class StudentStreamLab {
 }
 ```
 
-**Expected Output : **
+**Expected Output :**
 
 ```text
 Students with GPA > 3.0:
