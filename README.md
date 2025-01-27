@@ -119,7 +119,7 @@ public class StudentStreamLab {
 
         // TODO - Reducing: Calculate the average GPA of all students
 
-        // TODO Collecting: Collect all "Junior" students into a list
+        // TODO - Collecting: Collect all "Junior" students into a list
     }
 }
 ```
