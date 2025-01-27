@@ -20,14 +20,15 @@
 - Implement practical examples using Java streams and lambda expressions
 - Enhance your skills in writing more concise and readable code
 
-### Assignment Details
+### Part 1 : Java Streams - Functional Programming Operations
 
-You will work with Java streams to process collections of numbers. The lab demonstrates three key functional programming
-operations:
+In this lab, you will learn how to use Java streams to process collections of numbers. The lab demonstrates three key functional programming operations:
 
-- **Filtering elements** - Selecting specific elements from a collection
-- **Transforming elements** - Transforming elements
-- **Reducing** - Combining elements into a single result
+The goal is to perform the following operations on a list of integers:
+
+- Filter even numbers and print them.
+- Double each number in the list and print the transformed list.
+- Sum all numbers in the doubled list and print the sum.
 
 ```java
 package academy.javapro;
@@ -70,7 +71,7 @@ public class FunctionalProgramming {
 
 ```
 
-### Expected Output
+**Expected Output : **
 
 ```text
 Original numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -79,7 +80,68 @@ Doubled numbers: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 Sum of doubled numbers: 110
 ```
 
-### Hints
+**Hints: **
 
 - For Task 2: To double each number, use `.map(n -> n * 2)`
 - For Task 3: To sum numbers, convert the stream to `IntStream` using `.mapToInt()`
+
+### Part 2 : Apply Filtering, Mapping, Reducing, and Collecting Results
+
+In this section, we’ll create a class representing a student with a GPA and college year (Freshman, Sophomore, Junior, Senior), and apply functional programming operations on a list of students.
+
+**Functional Operations**
+
+- Filtering: Filter students with a GPA higher than 3.0.
+- Mapping: Extract only the names of students whose GPA is higher than 3.0.
+- Reducing: Calculate the average GPA of all students.
+- Collecting: Collect all students into a list who are Juniors.
+
+```java
+package academy.javapro;
+
+import java.util.*;
+import java.util.stream.*;
+
+public class StudentStreamLab {
+    public static void main(String[] args) {
+        // Creating a list of students
+        List<Student> students = Arrays.asList(
+                new Student("Alice", 3.5, "Junior"),
+                new Student("Bob", 3.8, "Senior"),
+                new Student("Charlie", 2.9, "Sophomore"),
+                new Student("David", 3.1, "Freshman"),
+                new Student("Eve", 3.9, "Junior")
+        );
+
+        // TODO - Filtering: Students with GPA > 3.0
+        
+        // TODO - Mapping: Extract names of students with GPA > 3.0
+
+        // TODO - Reducing: Calculate the average GPA of all students
+
+        // TODO Collecting: Collect all "Junior" students into a list
+    }
+}
+```
+
+**Expected Output : **
+
+```text
+Students with GPA > 3.0:
+Alice (Junior) - GPA: 3.5
+Bob (Senior) - GPA: 3.8
+David (Freshman) - GPA: 3.1
+Eve (Junior) - GPA: 3.9
+
+High GPA student names:
+Alice
+Bob
+David
+Eve
+
+Average GPA: 3.46
+
+Juniors:
+Alice (Junior) - GPA: 3.5
+Eve (Junior) - GPA: 3.9
+```
