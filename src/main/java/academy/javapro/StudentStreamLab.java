@@ -19,7 +19,6 @@ public class StudentStreamLab {
         List<Student> studentAbove3 = students.stream()
                 .filter(student -> student.getGpa() > 3.0)
                 .collect(Collectors.toList());
-
         System.out.println("Students with GPA > 3.0: ");
         studentAbove3.forEach(student -> System.out.println(student));
         System.out.println();
@@ -28,7 +27,6 @@ public class StudentStreamLab {
         List<String> studentNamesAbove3 = studentAbove3.stream()
                 .map(Student::getName)
                 .collect(Collectors.toList());
-
         System.out.println("High GPA student names: ");
         studentNamesAbove3.forEach(studentName -> System.out.println(studentName));
         System.out.println();
@@ -38,7 +36,6 @@ public class StudentStreamLab {
                 .mapToDouble(Student::getGpa)
                 .average()
                 .orElse(0.0);
-
         System.out.println("Average GPA: " + averageGpa);
         System.out.println();
 
@@ -46,7 +43,6 @@ public class StudentStreamLab {
         List<Student> juniorStudents = students.stream()
                 .filter(student -> student.getCollegeYear().equals("Junior"))
                 .collect(Collectors.toList());
-
         System.out.println("Juniors: ");
         juniorStudents.forEach(junior -> System.out.println(junior));
     }
